@@ -8,8 +8,8 @@ d3.html('assets/GOT-network.svg').then(function(newDocument){
   
     // Now we switch to D3.js
     // because selections and event binding are easier
-    const clusters = d3.selectAll('#nodes > g');
-    clusters.on('click', function(){
+    const clusters = d3.selectAll('#nodes > g > circle');
+    clusters.on('mouseover', function(){
       clusters.style('opacity',0.3);
       // «this» refers to clicked element
       d3.select(this).style('opacity',1);
